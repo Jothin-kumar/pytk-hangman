@@ -15,7 +15,7 @@ def showmsg(text: str, fg: str="yellow"):
     msgLabel.config(text=text, fg=fg)
 msgLabel.pack()
 
-inputGuess = tk.Entry(root, font=("", 13), bg="black", fg="white")
+inputGuess = tk.Entry(root, font=("", 13), bg="black", fg="white", insertbackground="white")
 inputGuess.pack(pady=50)
 def get_guess():
     return inputGuess.get()
