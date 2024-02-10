@@ -5,17 +5,23 @@ root.title("Hangman")
 root.config(bg="black")
 mainloop = root.mainloop
 
-hangmanDisplay = tk.Label(root, bg="black", fg="white", anchor="w", justify="left", font=("", 30), padx=100, pady=50)
-hangmanDisplay.pack()
+main = tk.Frame(root, bg="black")
+main.pack(anchor="center")
+
+hangmanDisplay = tk.Label(main, bg="black", fg="white", anchor="w", justify="left", font=("", 20), padx=100, pady=50)
+hangmanDisplay.grid(row=0, column=0, sticky="w")
 def update_hangman(text: str, fg: str="white"):
     hangmanDisplay.config(text=text, fg=fg)
 
-msgLabel = tk.Label(root, text="Guess the number [1 to 30]: ", bg="black", fg="yellow", font=("", 13))
+right_frame = tk.Frame(main, bg="black")
+right_frame.grid(row=0, column=1, sticky="e")
+
+msgLabel = tk.Label(right_frame, text="Guess the number [1 to 30]: ", bg="black", fg="yellow", font=("", 13))
 def showmsg(text: str, fg: str="yellow"):
     msgLabel.config(text=text, fg=fg)
 msgLabel.pack()
 
-inputGuess = tk.Entry(root, font=("", 13), bg="black", fg="white", insertbackground="white")
+inputGuess = tk.Entry(right_frame, font=("", 13), bg="black", fg="white", insertbackground="white")
 inputGuess.pack(pady=50)
 def get_guess():
     return inputGuess.get()
