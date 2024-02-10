@@ -25,6 +25,7 @@ msgLabel.pack()
 
 inputGuess = tk.Entry(right_frame, font=("", 13), bg="black", fg="white", insertbackground="white")
 inputGuess.pack(pady=50)
+inputGuess.focus_set()
 def get_guess():
     return inputGuess.get()
 def config_onguess_input(onguess_input):
