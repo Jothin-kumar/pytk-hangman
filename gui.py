@@ -21,3 +21,5 @@ def get_guess():
     return inputGuess.get()
 def config_onguess_input(onguess_input):
     inputGuess.bind("<Return>", onguess_input)
+def disable_guess_input():
+    inputGuess.config(state="disabled")
