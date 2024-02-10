@@ -27,11 +27,11 @@ def on_guess(e):
 
 def game_won():
     gui.showmsg("Thanks for playing!", "green")
-    gui.update_hangman(man.correct_guess_won)
+    gui.update_hangman(man.correct_guess_won, "green")
     gui.disable_guess_input()
 def game_lost():
     gui.showmsg("Try again!", "yellow")
-    gui.update_hangman(man.incorrect_guess_lost.format(number=number))
+    gui.update_hangman(man.incorrect_guess_lost.format(number=number), "red")
     gui.disable_guess_input()
 
 
