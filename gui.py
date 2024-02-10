@@ -2,11 +2,13 @@ import tkinter as tk
 
 root = tk.Tk()
 root.title("Hangman")
+root.minsize(1000, 690)
+root.attributes("-fullscreen", True)
 root.config(bg="black")
 mainloop = root.mainloop
 
 main = tk.Frame(root, bg="black")
-main.pack(anchor="center")
+main.place(relx=.5, rely=.5, anchor="center")
 
 hangmanDisplay = tk.Label(main, bg="black", fg="white", anchor="w", justify="left", font=("", 20), padx=100, pady=50)
 hangmanDisplay.grid(row=0, column=0, sticky="w")
