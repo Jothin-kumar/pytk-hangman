@@ -23,7 +23,7 @@ def on_guess(e):
         gui.update_hangman(frame)
         if guess not in incorrect_guesses:
             incorrect_guesses.append(guess)
-        gui.showmsg(f"Incorrect number(s): {", ".join(incorrect_guesses)}")
+        gui.showmsg(f"Incorrect number(s): {', '.join(incorrect_guesses)}")
 
 def game_won():
     gui.showmsg("Thanks for playing!", "green")
