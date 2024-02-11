@@ -1,5 +1,5 @@
 # Hangman
-Guess the correct number between 1 and 30.
+Guess the correct number between 1 and 30. Made with python tkinter.
 
 ```
 git clone https://github.com/Jothin-kumar/pytk-hangman
