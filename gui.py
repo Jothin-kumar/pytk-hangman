@@ -29,6 +29,9 @@ inputGuess.focus_set()
 def get_guess():
     return inputGuess.get()
 def config_onguess_input(onguess_input):
-    inputGuess.bind("<Return>", onguess_input)
+    def handler(evt):
+        onguess_input(evt)
+        inputGuess.delete(0, "end")
+    inputGuess.bind("<Return>", handler)
 def disable_guess_input():
     inputGuess.config(state="disabled")
